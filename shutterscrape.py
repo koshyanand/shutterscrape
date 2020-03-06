@@ -42,7 +42,7 @@ def imagescrape():
 
         driver = webdriver.Chrome(executable_path="/home/koshy/Desktop/projects/shutterscrape/chromedriver", options=chrome_options)
         driver.maximize_window()
-        for i in range(101, searchPage + 1):
+        for i in range(1001, searchPage + 1):
             url = "https://www.shutterstock.com/search?searchterm=" + searchTerm + "&sort=popular&image_type=" + image_type + "&search_source=base_landing_page&language=en&page=" + str(i)
             print(url)
             driver.get(url)
@@ -113,7 +113,7 @@ while True:
     #     break
     searchCount = 2
     searchTerm = "floral+patterns"
-    searchPage = 200
+    searchPage = 2000
     imagescrape()
     # print("Scraping complete.")
     # restartScrape = inp("Keep scraping? ('y' for yes or 'n' for no) ")
